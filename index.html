@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="header-logo">
+                    <img class="logo" src="image/logo.png" alt="Company `s logo">
+                </div>
+                <div class="header-phone">
+                    <a href="tel:+74997777777" class="phone">+7(499) 777-77-77</a>
+                    <a href="tel:+74997777777" class="phone">+7(499) 777-77-77</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="f2">
+        <div class="container">
+            <h2 class="f2-title">форма с кнопкой</h2>
+            <div class="f2-form">
+                <h3 class="f2-form-title">оставь телефон и получи что-то офигенное</h3>
+                <div class="f2-form-input">
+                    <input class="f2-form-phone" type="tel" placeholder="Введите номер">
+                    <input class="f2-form-btn" value="получить" onclick="alert('Ваше сообщение успешно отправлено!')" type="button">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="f3">
+        <div class="container">
+            <div class="f3-slider">
+                <h2 class="slider-title">Тут у нас слайдер</h3>
+                    <div class="all">
+                        <input checked type="radio" name="respond" id="desktop">
+                        <article id="slider">
+                            <input checked type="radio" name="slider" id="switch1">
+                            <input type="radio" name="slider" id="switch2">
+                            <input type="radio" name="slider" id="switch3">
+                            <div id="slides">
+                                <div id="overflow">
+
+
+                                    <div class="image">
+                                        <article><img src="image/slider1.jpg" alt="slider-image 1"> </article>
+                                        <article><img src="image/slider2.jpg" alt="slider-image 2"></article>
+                                        <article><img src="image/slider3.jpg" alt="slider-image 3"></article>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="controls">
+                                <label for="switch1"></label>
+                                <label for="switch2"></label>
+                                <label for="switch3"></label>
+                            </div>
+                            <div id="active">
+                                <label for="switch1"></label>
+                                <label for="switch2"></label>
+                                <label for="switch3"></label>
+                            </div>
+                        </article>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="f4">
+        <div class="container">
+            <h2 class="f4-title">просто текстовый блок</h2>
+            <p class="f4-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam posuere quis arcu sit amet commodo. Nullam ac
+                dui lacus. Nulla dapibus interdum interdum. Curabitur ut diam nisl. Vivamus libero lacus, viverra at dolor sit amet, commodo
+                faucibus orci. Vivamus laoreet ornare nisi, id pharetra tellus ullamcorper volutpat. Sed lacinia placerat accumsan. Praesent
+                pharetra ipsum scelerisque, sodales urna ut, placerat nulla. Duis nunc urna, semper non arcu ut, sagittis dapibus lorem.
+                Nunc nec urna id velit sodales sodales. Sed porttitor quam eget mollis consequat. Curabitur aliquet nec dui eget aliquet.
+                Nulla in risus ante.</p>
+        </div>
+    </section>
+
+    <section class="f5">
+        <div class="container">
+            <div class="f5-block">
+                <h2 class="f5-title">Калькулятор<br>(стоимость пользователь узнает по телефону)</h2>
+
+                <div class="f5-windows">
+                    <div class="f5-element">
+                        <div class="f5-element-img">
+                            <img src="image/window1.png" alt="window-image 1">
+                        </div>
+                    </div>
+                    <div class="f5-element">
+                        <div class="f5-element-img">
+                            <img src="image/window2.png" alt="window-image 2">
+                        </div>
+                    </div>
+                    <div class="f5-element">
+                        <div class="f5-element-img">
+                            <img src="image/window3.png" alt="window-image 3">
+                        </div>
+                    </div>
+                    <div class="f5-element">
+                        <div class="f5-element-img">
+                            <img src="image/window4.png" alt="window-image 4">
+                        </div>
+                    </div>
+                    <div class="f5-element">
+                        <div class="f5-element-img">
+                            <img src="image/window5.png" alt="window-image 5">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="f5-windows-s" id="myBtnContainer">
+                <a href="javascript:l_image('image/view1.png')" class="f5-element-title active">Одностворчатое</a>
+                <a href="javascript:l_image('image/view2.png')" class="f5-element-title ">Двухстворчатое</a>
+                <a href="javascript:l_image('image/view3.png')" class="f5-element-title ">Трехстворчатое</a>
+                <a href="javascript:l_image('image/view4.png')" class="f5-element-title">Балконный блок</a>
+                <a href="javascript:l_image('image/view5.png')" class="f5-element-title">Остекление балкона</a>
+            </div>
+
+            <div class="f5-calculator">
+
+                <div class="ff">
+
+                    <div class="calculator-criterion">
+                        <h2 class="calculator-title calculator-title1">Одностворчатое окно KBE</h2>
+
+
+                        <p class="criterion-title">1. Критерий выбора</p>
+
+                        <input type="radio" id="choose1" name="gender" value="пункт выбора 1">
+                        <label class="criterion" for="choose1">пункт выбора 1</label>
+                        <input type="radio" id="choose2" name="gender" value="пункт выбора 2">
+                        <label class="criterion" for="choose2">пункт выбора 2</label>
+                        <input type="radio" id="choose3" name="gender" value="пункт выбора 3">
+                        <label class="criterion" for="choose3">пункт выбора 3</label>
+
+                        <p class="criterion-title calculator-title2">2. Выберите открывание створки</p>
+                        <div class="custom-dropdown">
+                            <select>
+                                <option>Не открывается</option>
+                                <option>пункт выбора 1</option>
+                                <option>пункт выбора 2</option>
+                                <option>пункт выбора 3</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="window-argument">
+
+                        <div class="window-math-param">
+                            <input class="math-input" type="text">
+                            <p class="math-multiply">х</p>
+                            <input class="math-input" type="text">
+                        </div>
+                        <div class="window-math-parametr">
+                            <p class="window-math window-math-width">ширина, см</p>
+                            <p class="window-math window-math-hight">высота, см</p>
+                        </div>
+                    </div>
+
+                    <div class="calculator-window-btn">
+                        <input class="window-btn-phone" type="tel" placeholder="Введите номер">
+                        <input class="window-btn" value="рассчитать" type="button">
+                    </div>
+
+                    <div class="window-view">
+                        <aside class="window-option">
+                            высота
+                        </aside>
+
+                        <main>
+                            <img src="image/view1.png" alt="window-image" name="example_img">
+                        </main>
+                        <p class="window-option window-width">ширина</p>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="container">
+            <p class="footer-text">просто<br>скромный футер</p>
+        </div>
+    </footer>
+    <!-- кнопки становятся активными при нажатии на кнопку -->
+    <script>
+        let btnContainer = document.getElementById("myBtnContainer");
+        let btns = btnContainer.getElementsByClassName("f5-element-title");
+        for (let i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+    </script>
+    <!--  смена картинок при выборе типа окна -->
+    <script type="text/javascript">
+        function l_image(a) {
+            document.example_img.src = a;
+        }
+    </script>
+
+
+</body>
+
+</html>
