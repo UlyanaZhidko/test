@@ -27,10 +27,6 @@
     box-sizing: border-box;
 }
 
-body {
-    overflow-x: hidden;
-}
-
 .container {
     max-width: 1000px;
     margin: 0 auto;
@@ -122,6 +118,7 @@ body {
 
 .f3 {
     height: 397px; 
+    overflow-x: hidden;
 }
 
 .slider-title {
@@ -363,19 +360,20 @@ label, a {
     background: transparent;
     height: 45px;
     border: 0;
-    width: 386px;
+    width: 372px;
     color: #000;
     font-family: 'MyriadPro-Regular', sans-serif;
     font-size: 18px;
     line-height: 40px;
     padding-left: 13px;
+    cursor: pointer;
 } 
 
 .custom-dropdown {
     border: 2px solid #aeaeae;
     overflow: hidden; 
     height: 45px;
-    background: url("/image/drop.png") 96% / 28px no-repeat ;
+    background: url(image/drop.png) 96% / 28px no-repeat ;
     width: 358px;
     border-radius: 10px;
     margin-top: -10px;
@@ -697,7 +695,7 @@ aside {
     }
     .custom-dropdown {
         width: 170px;
-        background: url("/image/drop.png") 96% / 15px no-repeat;
+        background: url("image/drop.png") 96% / 15px no-repeat;
     }
     .window-option {
         margin-left: 0px;
@@ -817,7 +815,7 @@ aside {
     }
     .custom-dropdown {
         width: 130px;
-        background: url("/image/drop.png") 96% / 15px no-repeat;
+        background: url("image/drop.png") 96% / 15px no-repeat;
     }
     .custom-dropdown select {
         font-size: 13px;
