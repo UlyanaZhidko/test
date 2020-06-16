@@ -27,6 +27,10 @@
     box-sizing: border-box;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 .container {
     max-width: 1000px;
     margin: 0 auto;
@@ -55,7 +59,7 @@
 } 
 
 .f2 {
-    background-image: url(/image/f2.png);
+    background-image: url(image/f2.png);
     background-size: cover;
     background-position: bottom center;
     height: 490px;
@@ -69,6 +73,7 @@
     padding-bottom: 20px;
     margin-left: 180px;
     text-transform: uppercase;
+    font-weight: 300;
 }
 
 .f2-form {
@@ -86,6 +91,7 @@
     text-transform: uppercase;
     padding: 30px 23px;
     text-align: center;
+    font-weight: 300;
 }
 
 .f2-form-phone,
@@ -125,7 +131,8 @@
     text-align: center;
     text-transform: uppercase;
     margin-top: 37px;
-    line-height: 1.2;   
+    line-height: 1.2;
+    font-weight: 300;
 }
 
 #slider { /*положение слайдера*/
@@ -135,17 +142,10 @@
     margin: 0 auto;
 }
 
-#slides article { /*изображения справа друг от дhруга*/
-	width: 20%;
-	float: left;
-}
-
 #slides .image { /* общий размер блока с изображениями*/
     width: 500%;
     line-height: 0;
     text-align: center;
-    margin-left: -201px;
-    margin-top: -40px;
 }
 
 #overflow {
@@ -156,8 +156,9 @@
     box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.17);  
 }
 
-article img {
-    width: 100%;
+.image {
+    display: flex;
+    margin-top: -155px;
 }
 
 #desktop:checked ~ #slider { /*размер всего слайдера*/
@@ -175,21 +176,15 @@ label, a {
 
 /*позиция изображения при активации переключателя*/
 #switch1:checked ~ #slides .image {
-	margin-left: 0;
+	margin-left: -92%;
 }
 
 #switch2:checked ~ #slides .image {
-	margin-left: -100%;
+	margin-left: -370%;
 }
 
 #switch3:checked ~ #slides .image {
-	margin-left: -200%;
-}
-
-#controls { /*положение блока управляющих элементов*/
-	margin: -173px 0 0 0;
-	width: 100%;
-	height: 50px;
+	margin-left: -652%;
 }
 
 #active label { /*стиль переключателя*/
@@ -206,8 +201,8 @@ label, a {
 }
       
 #active { /*расположение блока с переключателями*/
-	margin: 22% 0 0;
-	text-align: center;
+    margin: 22px 0 0;
+    text-align: center;
 }
 
 #active label:nth-child(1):after,
@@ -248,6 +243,7 @@ label, a {
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 30px;
+    font-weight: 300;
 }
 
 .f4-text {
@@ -267,6 +263,7 @@ label, a {
     font-size: 24px;
     text-transform: uppercase;
     text-align: center;
+    font-weight: 300;
 }
 
 .f5-windows {
@@ -314,7 +311,7 @@ label, a {
 .f5-element-title.active {
     color: #0099de;
     text-decoration-color:#0099de;
-    border-bottom: 2px solid currentColor;
+    border-bottom: 1.5px solid currentColor;
 }
 
 .f5-calculator {
@@ -337,7 +334,8 @@ label, a {
     margin-left: -3px;
     padding-bottom: 55px;
     line-height: 1.2;   
-    padding-top: 64px; 
+    padding-top: 64px;
+    font-weight: 300;
 }
 
 .calculator-title2 {
@@ -393,7 +391,7 @@ label, a {
 
 aside {
 	transform: rotate(-90deg);
-	width: 71px;
+	width: 74px;
 	height: 89px;
     margin-left: 25px;
     margin-top: 60px;
@@ -401,12 +399,12 @@ aside {
 
 .window-view { 
     display: flex;
-    margin-top: -374px;
+    margin-top: 30px;
 }
 
 .window-width {
-	margin-left: -171px;
-	margin-top: -66px;
+	margin-left: 128px;
+	margin-top: -438px;
 	font-style: italic;
 }
 
@@ -499,7 +497,7 @@ aside {
     background-position: 1px 50%; 
 }
 
-footer {
+.footer {
     background-color: #767676;
     margin-top: 99px;
     height: 148px;
@@ -509,7 +507,7 @@ footer {
     position: relative;
 }
 
-footer p {
+.footer p {
     position: absolute;
     top: 50%;
     margin-top: -0.625em;
@@ -554,9 +552,7 @@ footer p {
     }
     .custom-dropdown {
         width: 303px;
-    }
-    
-    
+    }   
 }
 
 @media (max-width: 840px) {
@@ -606,8 +602,6 @@ footer p {
     aside { 
         margin-top: 27px;
     }
-   
-   
 }
 
 @media (max-width: 600px) {
@@ -639,7 +633,6 @@ footer p {
     .criterion {
         margin-right: 67px;
     }
-    
     .window-option {
         margin-left: 0px;
         margin-bottom: 0;
@@ -649,7 +642,8 @@ footer p {
         height: 48px;
     }
     .window-width {
-        margin-left: -159px;
+        margin-left: 100px;
+        margin-top: -428px;
     }
     .math-input {
         width: 70px;
@@ -689,11 +683,6 @@ footer p {
     #slider {
         top: 180px;
     }
-
-
-
-
-
     .calculator-criterion {
         margin-left: 170px;
     }
@@ -719,7 +708,8 @@ footer p {
         height: 48px;
     }
     .window-width {
-        margin-left: -159px;
+        margin-top: -400px;
+        margin-left: 70px;
     }
     .math-input {
         width: 50px;
@@ -739,7 +729,7 @@ footer p {
         width: 50%;
     }
     .window-view {
-        margin-top: -352px;
+        margin-top: 8px;
     }
     .window-option {
         font-size: 14px;
@@ -751,14 +741,9 @@ footer p {
         margin-bottom: 0px;
         margin-left: -15px;
     }
-    .window-width {
-        margin-top: -38px;
-        margin-left: -177px;
-    }
     .f5-calculator {
         height: 465px;
     }
-
 }
 
 @media (max-width: 446px) {
@@ -768,7 +753,7 @@ footer p {
     .f5-calculator {
         height: 397px;
     }
-    .ff {
+    .f5-calculator-in {
         transform: scale(0.8);
     }
     .criterion {
@@ -777,14 +762,16 @@ footer p {
     .calculator-criterion {
         margin-left: 130px;
     }
+    .window-width {
+        margin-left: 43px;
+    }
     .window-view {
-        margin-top: -352px;
         margin-left: -38px;
     }
     .window-argument {
         margin-left: -65px;
     }
-    footer {
+    .footer {
         margin-top: 30px;
         height: 99px;
         font-size: 20px;
@@ -819,7 +806,7 @@ footer p {
     .f5 {
         padding-top: 20px;
     }
-    .ff {
+    .f5-calculator-in {
         transform: scale(0.75);
     }
     .calculator-title {
@@ -837,5 +824,4 @@ footer p {
         padding-left: 5px;
         width: 144px;
     }
-
 }

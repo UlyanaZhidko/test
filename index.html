@@ -50,19 +50,15 @@
                             <div id="slides">
                                 <div id="overflow">
 
-
                                     <div class="image">
                                         <article><img src="image/slider1.jpg" alt="slider-image 1"> </article>
                                         <article><img src="image/slider2.jpg" alt="slider-image 2"></article>
                                         <article><img src="image/slider3.jpg" alt="slider-image 3"></article>
                                     </div>
+
                                 </div>
                             </div>
-                            <div id="controls">
-                                <label for="switch1"></label>
-                                <label for="switch2"></label>
-                                <label for="switch3"></label>
-                            </div>
+
                             <div id="active">
                                 <label for="switch1"></label>
                                 <label for="switch2"></label>
@@ -131,7 +127,7 @@
 
             <div class="f5-calculator">
 
-                <div class="ff">
+                <div class="f5-calculator-in">
 
                     <div class="calculator-criterion">
                         <h2 class="calculator-title calculator-title1">Одностворчатое окно KBE</h2>
@@ -176,6 +172,11 @@
                         <input class="window-btn" value="рассчитать" type="button">
                     </div>
 
+                    <div class="view">
+                        <p class="window-option window-width">ширина</p>
+
+                    </div>
+
                     <div class="window-view">
                         <aside class="window-option">
                             высота
@@ -184,9 +185,11 @@
                         <main>
                             <img src="image/view1.png" alt="window-image" name="example_img">
                         </main>
-                        <p class="window-option window-width">ширина</p>
+
+                        <!--  <p class="window-option window-width">ширина</p> -->
 
                     </div>
+
                 </div>
 
             </div>
@@ -195,11 +198,13 @@
 
     </section>
 
-    <footer>
+    <footer class="footer">
         <div class="container">
             <p class="footer-text">просто<br>скромный футер</p>
         </div>
     </footer>
+
+    
     <!-- кнопки становятся активными при нажатии на кнопку -->
     <script>
         let btnContainer = document.getElementById("myBtnContainer");
