@@ -27,6 +27,10 @@
     box-sizing: border-box;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 .container {
     max-width: 1000px;
     margin: 0 auto;
@@ -117,8 +121,7 @@
 }
 
 .f3 {
-    height: 397px; 
-    overflow-x: hidden;
+    height: 397px;
 }
 
 .slider-title {
@@ -671,7 +674,7 @@ aside {
         font-size: 20px;   
     }
     .f2-form {
-        margin-left: 10px;
+        margin-left: 0px;
     }
     .f2-form-title,
     .f2-form-phone,
