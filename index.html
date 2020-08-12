@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
+    <title>Landing page</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -30,8 +30,10 @@
             <div class="f2-form">
                 <h3 class="f2-form-title">оставь телефон и получи что-то офигенное</h3>
                 <div class="f2-form-input">
+                    <form method="POST" id="formx" action="javascript:void(null);" onsubmit="call()"></form>
                     <input class="f2-form-phone" type="tel" placeholder="Введите номер">
-                    <input class="f2-form-btn" value="получить" onclick="alert('Ваше сообщение успешно отправлено!')" type="button">
+                    <input class="f2-form-btn" value="получить" onclick="alert('Ваше сообщение успешно отправлено!')" type="submit">
+                    </form>
                 </div>
             </div>
         </div>
@@ -85,7 +87,7 @@
     <section class="f5">
         <div class="container">
             <div class="f5-block">
-                <h2 class="f5-title">Калькулятор<br>(стоимость пользователь узнает по телефону)</h2>
+                <h2 class="f5-title">Калькулятор</h2>
 
                 <div class="f5-windows">
                     <div class="f5-element">
@@ -135,58 +137,55 @@
 
                         <p class="criterion-title">1. Критерий выбора</p>
 
-                        <input type="radio" id="choose1" name="gender" value="пункт выбора 1">
-                        <label class="criterion" for="choose1">пункт выбора 1</label>
-                        <input type="radio" id="choose2" name="gender" value="пункт выбора 2">
-                        <label class="criterion" for="choose2">пункт выбора 2</label>
-                        <input type="radio" id="choose3" name="gender" value="пункт выбора 3">
-                        <label class="criterion" for="choose3">пункт выбора 3</label>
+                        <div class="calculator-criterion-input">
+                            <input type="radio" id="choose1" name="gender" value="пункт выбора 1">
+                            <label class="criterion" for="choose1">пункт выбора 1</label>
+                            <input type="radio" id="choose2" name="gender" value="пункт выбора 2">
+                            <label class="criterion" for="choose2">пункт выбора 2</label>
+                            <input type="radio" id="choose3" name="gender" value="пункт выбора 3">
+                            <label class="criterion" for="choose3">пункт выбора 3</label>
+                        </div>
 
                         <p class="criterion-title calculator-title2">2. Выберите открывание створки</p>
+
                         <div class="custom-dropdown">
-                            <select>
-                                <option>Не открывается</option>
-                                <option>пункт выбора 1</option>
-                                <option>пункт выбора 2</option>
-                                <option>пункт выбора 3</option>
+                            <select onchange="calc()" id="productType">
+                                <option value="0">Выбрать</option>
+                                <option value="0.007831425253">Одностворчатое</option>
+                                <option value="0.009813874788">Двухстворчатое</option>
+                                <option value="0.008518261674">Трехстворчатое</option>
+                                <option value="0.005423560469">Балконный блок</option>
+                                <option value="0.007896780546">Остекление балкона</option>
                             </select>
                         </div>
 
-                    </div>
-
-                    <div class="window-argument">
-
                         <div class="window-math-param">
-                            <input class="math-input" type="text">
+                            <input class="math-input" type="number" id="valueLen" min="1" onkeyup="calc()" />
                             <p class="math-multiply">х</p>
-                            <input class="math-input" type="text">
+                            <input class="math-input" type="number" id="valueWid" min="1" value="1" onkeyup="calc()" />
                         </div>
+
+                        <div class="result">Цена: <span id="result">0</span>$</div>
+
                         <div class="window-math-parametr">
                             <p class="window-math window-math-width">ширина, см</p>
                             <p class="window-math window-math-hight">высота, см</p>
                         </div>
-                    </div>
-
-                    <div class="calculator-window-btn">
-                        <input class="window-btn-phone" type="tel" placeholder="Введите номер">
-                        <input class="window-btn" value="рассчитать" type="button">
-                    </div>
-
-                    <div class="view">
-                        <p class="window-option window-width">ширина</p>
 
                     </div>
+                </div>
 
-                    <div class="window-view">
-                        <aside class="window-option">
-                            высота
-                        </aside>
 
-                        <main>
-                            <img src="image/view1.png" name="example_img" alt="Выбранный вид окна">
-                        </main>
+                <div class="view">
+                    <p class="window-option window-width">ширина</p>
+                </div>
 
-                    </div>
+                <div class="window-view">
+                    <aside class="window-option">высота</aside>
+
+                    <main>
+                        <img src="image/view1.png" name="example_img" alt="Выбранный вид окна">
+                    </main>
 
                 </div>
 
@@ -196,13 +195,15 @@
 
     </section>
 
+
     <footer class="footer">
         <div class="container">
             <p class="footer-text">просто<br>скромный футер</p>
         </div>
     </footer>
 
-    
+
+
     <!-- кнопки становятся активными при нажатии на кнопку -->
     <script>
         let btnContainer = document.getElementById("myBtnContainer");
@@ -215,11 +216,42 @@
             });
         }
     </script>
+
+
     <!--  смена картинок при выборе типа окна -->
     <script type="text/javascript">
         function l_image(a) {
             document.example_img.src = a;
         }
+    </script>
+
+
+    <!-- Функция подсчета стоимости изделий -->
+    <script type="text/javascript">
+
+        function calc() {
+            //получаем ссылку на элемент Select (Тип изделия)
+            var productType = document.getElementById('productType');
+            //получаем ссылку на элемент input (Размеры)
+            var valueLen = document.getElementById('valueLen');
+            var valueWid = document.getElementById('valueWid');
+            //получаем ссылку на элемент span, в него будем писать стоимость
+            var result = document.getElementById('result');
+            var price = 0;
+            price += parseInt(productType.options[productType.selectedIndex].value);
+            //price += (is_html.checked == true) ? parseInt(is_html.value) : 0;
+            price = parseInt(valueLen.value * valueWid.value * productType.value).toFixed(2);
+
+            result.innerHTML = price;
+        }
+    </script>
+
+
+    <!-- Очищение формы при обновл. стр. -->
+    <script>
+        document.getElementById('valueLen').value = "1";
+        document.getElementById('valueWid').value = "1";
+        document.getElementById('productType').value = "0";
     </script>
 
 

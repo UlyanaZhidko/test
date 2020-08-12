@@ -373,13 +373,14 @@ label, a {
 } 
 
 .custom-dropdown {
-    border: 2px solid #aeaeae;
-    overflow: hidden; 
-    height: 45px;
-    background: url(image/drop.png) 96% / 28px no-repeat ;
-    width: 358px;
-    border-radius: 10px;
-    margin-top: -10px;
+	border: 2px solid #aeaeae;
+	overflow: hidden;
+	height: 45px;
+	background: url(image/drop.png) 96% / 28px no-repeat;
+	width: 358px;
+	border-radius: 10px;
+	margin-top: -10px;
+	overflow-x: hidden;
 }
 
 .window-option {
@@ -388,6 +389,15 @@ label, a {
     font-family: 'MyriadPro-Semibold', sans-serif;
     line-height: 40px;
     font-style: italic;
+}
+
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
 }
 
 aside {
@@ -405,7 +415,7 @@ aside {
 
 .window-width {
 	margin-left: 128px;
-	margin-top: -438px;
+	margin-top: -390px;
 	font-style: italic;
 }
 
@@ -416,14 +426,23 @@ aside {
  
 .window-math-param {
     display: flex;
-    margin-top: -44px;
+    margin-top: -45px;
+    margin-left: -372px;
 }
 
 .window-math-parametr {
     display: flex;
     margin-top: -38px;
+    margin-left: -372px;
 }
 
+.result {
+    margin-top: 50px;
+    font-family: 'MyriadPro-Bold', sans-serif;
+    line-height: 37px;
+    font-size: 20px;
+    color: #000;
+}
 .window-math {
     display: flex;
     font-size: 20.41px;
@@ -461,26 +480,6 @@ aside {
 
 .math-input:first-child {
     margin-left: 36px;
-}
-
-.calculator-window-btn {
-    text-align: center;
-    margin-top: 440px;
-}
-
-.window-btn {
-    border-radius: 10px;
-    border: none;
-    width: 280px;
-    height: 46px;
-    color: #fff;
-    font-family: 'MyriadPro-Bold', sans-serif;
-    font-size: 20px;
-    text-align: center;
-    padding-top: 5px;
-    background-color: #9da3d7;
-    text-transform: uppercase;
-    cursor: pointer;
 }
 
 .window-btn-phone {
@@ -554,6 +553,9 @@ aside {
     .custom-dropdown {
         width: 303px;
     }   
+    .custom-dropdown select {
+        width: 317px;
+    }
 }
 
 @media (max-width: 840px) {
@@ -580,12 +582,8 @@ aside {
     .window-argument {
         margin-bottom: -362px;
     }
-    .calculator-window-btn {
-        margin-top: 440px;
-        display: flex;
-        flex-flow: column wrap;
-        align-items: center;
-        justify-content: center;
+    .result {
+        z-index: 99;
     }
     .window-btn-phone {
        margin-right: 0;
@@ -602,6 +600,18 @@ aside {
     }
     aside { 
         margin-top: 27px;
+    }
+    .window-math-param {
+        margin-left: -345px;
+    }
+    .window-math-parametr {
+        margin-left: -350px;
+    }
+    .result {
+        margin-left: 55px;
+    }
+    .custom-dropdown select {
+        width: 205px;
     }
 }
 
@@ -637,6 +647,7 @@ aside {
     .window-option {
         margin-left: 0px;
         margin-bottom: 0;
+        margin-top: 14px;
     }
     aside {
         width: 71px;
@@ -656,9 +667,28 @@ aside {
     .window-math {
         font-size: 15px;
     }
-    main img {
+    .main img {
         width: 70%;
     } 
+    .window-math-param {
+        margin-left: -269px;
+    }
+    .window-math-parametr {
+        margin-left: -265px;
+    }
+    .window-width {
+        margin-top: -321px;
+    }
+    .f5-calculator {
+        height: 439px;
+    }
+    .result {
+        margin-left: -90px;
+    }
+    .custom-dropdown select {
+        width: 183px;
+        font-size: 15px;
+    }
 }
 
 @media (max-width: 564px) {
@@ -709,8 +739,11 @@ aside {
         height: 48px;
     }
     .window-width {
-        margin-top: -400px;
+        margin-top: -248px;
         margin-left: 70px;
+    }
+    main img {
+        width: 50%;
     }
     .math-input {
         width: 50px;
@@ -726,7 +759,7 @@ aside {
     .window-argument {
         margin-left: -22px;
     }
-    main img {
+    .main img {
         width: 50%;
     }
     .window-view {
@@ -745,6 +778,27 @@ aside {
     .f5-calculator {
         height: 465px;
     }
+    .window-math-param {
+        margin-left: -190px;
+    }
+    .window-math-parametr {
+        margin-left: -196px;
+    }
+    .window-math {
+        padding-right: 24px;
+    }
+    .calculator-title {
+        margin-left: -108px;
+    }
+    .f5-calculator {
+        height: 377px;
+    }
+    select > option {
+        font-size: 10px;
+    }
+    .custom-dropdown select {
+        padding-left: 0px;
+    }
 }
 
 @media (max-width: 446px) {
@@ -752,30 +806,63 @@ aside {
         max-width: 350px;
     }
     .f5-calculator {
-        height: 397px;
+        height: 330px;
     }
     .f5-calculator-in {
         transform: scale(0.8);
     }
     .criterion {
-        margin-right: 50px;
+        margin-right: 38px;
+    }
+    .calculator-title {
+        margin-left: -100px;
+        padding-top: 0;
     }
     .calculator-criterion {
-        margin-left: 130px;
+        margin-left: 150px;
     }
     .window-width {
         margin-left: 43px;
+        margin-top: -233px;
+    }
+    main img {
+        width: 40%;
+        margin-left: -8px;
     }
     .window-view {
-        margin-left: -38px;
+        margin-left: -7px;
+        margin-top: 0px;
+    }
+    .window-math-param {
+        margin-left: -190px;
     }
     .window-argument {
         margin-left: -65px;
+    }
+    .window-math-parametr {
+        margin-left: -201px;
+        margin-top: -46px;
+    }
+    .window-math {
+        padding-right: 29px;
+    }
+    .result {
+        margin-left: -76px;
     }
     .footer {
         margin-top: 30px;
         height: 99px;
         font-size: 20px;
+    }
+    .f4 {
+        padding-top: 35px;
+    }
+    .f4-title {
+        font-size: 18px;
+        margin-bottom: 14px;
+    }
+    .f5 {
+        padding-top: 30px;
     }
 }
 
@@ -790,8 +877,12 @@ aside {
     .phone {
         font-size: 15px;
     }
+    .f2 {
+        height: 362px;
+    }
     .f2-title {
-        margin-left: 50px;   
+        margin-left: 50px;  
+        padding-top: 25px; 
     }
     .f2-form-phone,
     .f2-form-btn {
@@ -812,17 +903,49 @@ aside {
     }
     .calculator-title {
         padding-top: 0px;
+        margin-left: -150px;
     }
     .criterion {
-        margin-right: 0px;
+        margin-right: 78px;
     }
     .custom-dropdown {
-        width: 130px;
+        width: 180px;
         background: url("image/drop.png") 96% / 15px no-repeat;
+        margin-left: -115px;
     }
     .custom-dropdown select {
-        font-size: 13px;
+        font-size: 15px;
         padding-left: 5px;
-        width: 144px;
+        width: 194px;
+    }
+    .window-width {
+        margin-left: 43px;
+        margin-top: -305px;
+    }
+    .criterion-title {
+        margin-left: -156px;
+    }
+    .calculator-criterion-input {
+        margin-left: -90px;
+    }
+    .window-view,
+    .view {
+       display: none;
+    }
+    .window-math-param {
+        margin-left: -137px;
+        margin-top: 23px;
+    }
+    .window-math-parametr {
+        margin-left: -147px;
+    }
+    .f4-text {
+        padding: 0 20px;
+    }
+    .f2-form-title, .f2-form-phone, .f2-form-btn {
+        font-size: 18px;
+    }
+    .header-top {
+        padding: 25px 15px;
     }
 }
