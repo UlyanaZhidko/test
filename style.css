@@ -121,7 +121,7 @@ body {
 }
 
 .f3 {
-    height: 400px;
+    height: 455px;
     overflow: hidden;
 }
 
@@ -131,7 +131,6 @@ body {
     font-size: 24px;
     text-align: center;
     text-transform: uppercase;
-    margin-top: 37px;
     line-height: 1.2;
     font-weight: 300;
 }
@@ -233,9 +232,7 @@ label, a {
     transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
 }
 
-.f4 {
-    padding-top: 71px;
-}
+
 
 .f4-title {
     font-family: 'MyriadPro-Semibold', sans-serif;
@@ -614,6 +611,25 @@ aside {
     .custom-dropdown select {
         width: 205px;
     }
+    .f5 {
+        padding-top: 30px;
+    }
+    .f3 {
+        height: 430px;
+    }
+    .logo {
+        width: 70%;
+        height: auto;
+    }
+    .phone {
+        font-size: 30px;
+    }
+    .header-top {
+        padding: 65px 15px;
+    }
+    .f4-text {
+        padding: 0 20px;
+    }
 }
 
 @media (max-width: 600px) {
@@ -687,8 +703,25 @@ aside {
         margin-left: -90px;
     }
     .custom-dropdown select {
-        width: 183px;
+        width: 206px;
         font-size: 15px;
+    }
+    .f3 .container {
+        max-width: 380px;
+    }
+    .f3 {
+        height: 330px;
+    }
+    .f5 {
+        padding-top: 30px;
+    }
+    .f2-title {
+        text-align: center;
+        margin-left: 0;
+    }
+    .f2-form {
+        margin: 0 auto;
+        position: relative;
     }
 }
 
@@ -701,11 +734,7 @@ aside {
         height: auto;
     }
     .f2-title {
-        margin-left: 80px; 
         font-size: 20px;   
-    }
-    .f2-form {
-        margin-left: 0px;
     }
     .f2-form-title,
     .f2-form-phone,
@@ -800,6 +829,9 @@ aside {
     .custom-dropdown select {
         padding-left: 0px;
     }
+    .f3 {
+        height: 430px;
+    }
 }
 
 @media (max-width: 446px) {
@@ -855,9 +887,7 @@ aside {
         height: 99px;
         font-size: 20px;
     }
-    .f4 {
-        padding-top: 35px;
-    }
+   
     .f4-title {
         font-size: 18px;
         margin-bottom: 14px;
@@ -882,7 +912,6 @@ aside {
         height: 362px;
     }
     .f2-title {
-        margin-left: 50px;  
         padding-top: 25px; 
     }
     .f2-form-phone,
@@ -949,10 +978,10 @@ aside {
     .header-top {
         padding: 25px 15px;
     }
-    .f5-windows-s {
-        display: none;
-    }
     .slider-title {
         margin-top: 5px;
+    }
+    .f3 {
+        height: 400px;    
     }
 }

@@ -120,11 +120,25 @@
             </div>
 
             <div class="f5-windows-s" id="myBtnContainer">
-                <a href="javascript:l_image('image/view1.png')" class="f5-element-title active">Одностворчатое</a>
-                <a href="javascript:l_image('image/view2.png')" class="f5-element-title ">Двухстворчатое</a>
-                <a href="javascript:l_image('image/view3.png')" class="f5-element-title ">Трехстворчатое</a>
-                <a href="javascript:l_image('image/view4.png')" class="f5-element-title">Балконный блок</a>
-                <a href="javascript:l_image('image/view5.png')" class="f5-element-title">Остекление балкона</a>
+                <div class="box">
+                    <a href="javascript:l_image('image/view1.png')" class="f5-element-title active wintxt1">Одностворчатое</a>
+                </div>
+                <div class="box">
+                    <a href="javascript:l_image('image/view2.png')" class="f5-element-title wintxt2">Двухстворчатое</a>
+                </div>
+
+                <div class="box">
+                    <a href="javascript:l_image('image/view3.png')" class="f5-element-title wintxt3">Трехстворчатое</a>
+                </div>
+
+                <div class="box">
+                    <a href="javascript:l_image('image/view4.png')" class="f5-element-title wintxt4">Балконный блок</a>
+                </div>
+
+                <div class="box">
+                    <a href="javascript:l_image('image/view5.png')" class="f5-element-title wintxt5">Остекление балкона</a>
+                </div>
+
             </div>
 
             <div class="f5-calculator">
@@ -132,7 +146,7 @@
                 <div class="f5-calculator-in">
 
                     <div class="calculator-criterion">
-                        <h2 class="calculator-title calculator-title1">Одностворчатое окно KBE</h2>
+                        <h2 class="calculator-title windowinfo">Одностворчатое</h2>
 
 
                         <p class="criterion-title">1. Критерий выбора</p>
@@ -204,57 +218,8 @@
 
 
 
-    <!-- кнопки становятся активными при нажатии на кнопку -->
-    <script>
-        let btnContainer = document.getElementById("myBtnContainer");
-        let btns = btnContainer.getElementsByClassName("f5-element-title");
-        for (let i = 0; i < btns.length; i++) {
-            btns[i].addEventListener("click", function () {
-                var current = document.getElementsByClassName("active");
-                current[0].className = current[0].className.replace(" active", "");
-                this.className += " active";
-            });
-        }
-    </script>
 
-
-    <!--  смена картинок при выборе типа окна -->
-    <script type="text/javascript">
-        function l_image(a) {
-            document.example_img.src = a;
-        }
-    </script>
-
-
-    <!-- Функция подсчета стоимости изделий -->
-    <script type="text/javascript">
-
-        function calc() {
-            //получаем ссылку на элемент Select (Тип изделия)
-            var productType = document.getElementById('productType');
-            //получаем ссылку на элемент input (Размеры)
-            var valueLen = document.getElementById('valueLen');
-            var valueWid = document.getElementById('valueWid');
-            //получаем ссылку на элемент span, в него будем писать стоимость
-            var result = document.getElementById('result');
-            var price = 0;
-            price += parseInt(productType.options[productType.selectedIndex].value);
-            //price += (is_html.checked == true) ? parseInt(is_html.value) : 0;
-            price = parseInt(valueLen.value * valueWid.value * productType.value).toFixed(2);
-
-            result.innerHTML = price;
-        }
-    </script>
-
-
-    <!-- Очищение формы при обновл. стр. -->
-    <script>
-        document.getElementById('valueLen').value = "1";
-        document.getElementById('valueWid').value = "1";
-        document.getElementById('productType').value = "0";
-    </script>
-
-
+    <script src="script.js"></script>
 </body>
 
 </html>
