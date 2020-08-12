@@ -121,7 +121,8 @@ body {
 }
 
 .f3 {
-    height: 397px;
+    height: 400px;
+    overflow: hidden;
 }
 
 .slider-title {
@@ -906,7 +907,7 @@ aside {
         margin-left: -150px;
     }
     .criterion {
-        margin-right: 78px;
+        margin-right: 70px;
     }
     .custom-dropdown {
         width: 180px;
@@ -947,5 +948,11 @@ aside {
     }
     .header-top {
         padding: 25px 15px;
+    }
+    .f5-windows-s {
+        display: none;
+    }
+    .slider-title {
+        margin-top: 5px;
     }
 }
