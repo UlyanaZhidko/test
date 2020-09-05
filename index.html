@@ -121,22 +121,29 @@
 
             <div class="f5-windows-s" id="myBtnContainer">
                 <div class="box">
-                    <a href="javascript:l_image('image/view1.png')" class="f5-element-title active wintxt1">Одностворчатое</a>
+                    <a href="javascript:l_image('image/view1.png')" class="f5-element-title active wintxt1"
+                        onclick="btn_calc_func(value=0.007831425253); calc();">
+                        Одностворчатое
+                    </a>
                 </div>
                 <div class="box">
-                    <a href="javascript:l_image('image/view2.png')" class="f5-element-title wintxt2">Двухстворчатое</a>
-                </div>
-
-                <div class="box">
-                    <a href="javascript:l_image('image/view3.png')" class="f5-element-title wintxt3">Трехстворчатое</a>
-                </div>
-
-                <div class="box">
-                    <a href="javascript:l_image('image/view4.png')" class="f5-element-title wintxt4">Балконный блок</a>
+                    <a href="javascript:l_image('image/view2.png')" class="f5-element-title wintxt2"
+                        onclick="btn_calc_func(value=0.009813874788); calc();">Двухстворчатое</a>
                 </div>
 
                 <div class="box">
-                    <a href="javascript:l_image('image/view5.png')" class="f5-element-title wintxt5">Остекление балкона</a>
+                    <a href="javascript:l_image('image/view3.png')" class="f5-element-title wintxt3"
+                        onclick="btn_calc_func(value=0.008518261674); calc();">Трехстворчатое</a>
+                </div>
+
+                <div class="box">
+                    <a href="javascript:l_image('image/view4.png')" class="f5-element-title wintxt4"
+                        onclick="btn_calc_func(value=0.005423560469); calc();">Балконный блок</a>
+                </div>
+
+                <div class="box">
+                    <a href="javascript:l_image('image/view5.png')" class="f5-element-title wintxt5"
+                        onclick="btn_calc_func(value=0.007896780546); calc();">Остекление балкона</a>
                 </div>
 
             </div>
@@ -160,23 +167,22 @@
                             <label class="criterion" for="choose3">пункт выбора 3</label>
                         </div>
 
-                        <p class="criterion-title calculator-title2">2. Выберите открывание створки</p>
+                        <p class="criterion-title calculator-title2">2. Выберите тип окна</p>
 
                         <div class="custom-dropdown">
-                            <select onchange="calc()" id="productType">
-                                <option value="0">Выбрать</option>
-                                <option value="0.007831425253">Одностворчатое</option>
-                                <option value="0.009813874788">Двухстворчатое</option>
-                                <option value="0.008518261674">Трехстворчатое</option>
-                                <option value="0.005423560469">Балконный блок</option>
-                                <option value="0.007896780546">Остекление балкона</option>
+                            <select>
+                                <option>пункт выбора 1</option>
+                                <option>пункт выбора 2</option>
+                                <option>пункт выбора 3</option>
                             </select>
                         </div>
 
                         <div class="window-math-param">
-                            <input class="math-input" type="number" id="valueLen" min="1" onkeyup="calc()" />
+                            <input class="math-input" type="number" id="valueLen" placeholder="120" min="1" onKeyPress="cislo()"
+                                onkeyup="calc()" />
                             <p class="math-multiply">х</p>
-                            <input class="math-input" type="number" id="valueWid" min="1" value="1" onkeyup="calc()" />
+                            <input class="math-input" type="number" id="valueWid" placeholder="120" min="1" onKeyPress="cislo()"
+                                onkeyup="calc()" />
                         </div>
 
                         <div class="result">Цена: <span id="result">0</span>$</div>
